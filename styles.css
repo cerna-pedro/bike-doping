@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap');
+
+:root{
+    --bg-color: aliceblue;
+    --tooltip-bg: rgb(203, 238, 255);
+    --color:rgb(31, 31, 31);
+    --opacity: 0.5;
+    --stroke:black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: var(--color);
+    font-family: inherit;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color:var(--bg-color);
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+a:hover, a:active{
+    color: #5ecdc7;
+}
+
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+#title,#text-container{
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+g text{
+    fill: var(--color);
+    font-size: 0.75rem;
+}
+
+#axis-title{
+    font-size: 1.4rem;
+}
+
+.dot, #legend-symbols{
+    stroke:var(--stroke);
+    opacity: var(--opacity);
+}
+
+#legend-text{
+    text-anchor: left;
+}
+
+#tooltip{
+    pointer-events: none;
+    font-size: 0.8rem;
+    background-color: var(--tooltip-bg);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.axis-title{
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+    -webkit-transform-origin: center left;
+        -ms-transform-origin: center left;
+            transform-origin: center left;
+    text-anchor: middle;
+}
+
+.footer {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+    g text{
+        font-size: 0.6rem;
+    }
+    #axis-title{
+        font-size: 1.0rem;
+    }
+}
+
+@media (max-width: 350px) {
+    g text{
+        font-size: 0.5rem;
+    }
+    #axis-title{
+        font-size: 0.8rem;
+    }
+}
